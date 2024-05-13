@@ -1,0 +1,94 @@
+#carousel {
+    width: 100%;
+    height:420px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px auto;
+    display: flex;
+}
+
+.slide{
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideOverlay {
+    width: 50%;
+    height: 50%;
+    background: rgba(0,0,0,0.50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideTitle {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+#leftBtn {
+    position: absolute;
+    background: url("../assets/left.png") center no-repeat;
+    left: 5%;
+    height: 100%;
+    width: 50px;
+    border: none;
+}
+
+#rightBtn {
+    position: absolute;
+    background: url("../assets/right.png") center no-repeat;
+    right: 5%;
+    height: 100%;
+    width: 50px;
+    border: none;
+}
+
+.post {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #AEE2FF;
+    border: 1px solid black;
+}
+
+.titleAndData {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+
+}
+
+
+
+.paragraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+    text-indent: 20px;
+
+}
+
+.postImage {
+    width: 200px;
+    height: 200px;
+    background: dimgray;
+}

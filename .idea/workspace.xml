@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c88b76d-0b55-4ed4-ad6f-3f2c2220d149" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/browse.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/browse.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/blog-post.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
     </list>
@@ -47,7 +47,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "create-browse-page",
+    "git-widget-placeholder": "blog-post-page",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -74,6 +74,7 @@
       <workItem from="1715715155523" duration="82000" />
       <workItem from="1715774649710" duration="1920000" />
       <workItem from="1715778065490" duration="1427000" />
+      <workItem from="1715779836312" duration="3898000" />
     </task>
     <servers />
   </component>

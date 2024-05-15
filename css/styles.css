@@ -63,6 +63,10 @@ header {
     color: black;
 }
 
+.nav li a:hover{
+    color: white;
+}
+
 footer {
     display: flex;
     justify-content: center;

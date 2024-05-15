@@ -73,6 +73,8 @@ footer {
     align-items: center;
     padding: 20px;
     width: 100%;
+    border-top: 1px solid black;
+    background: linear-gradient(90deg, rgba(255, 155, 245, 0.00) 0%, #A3DEFF 100%), linear-gradient(0deg, #FF9BF5 0%, #A3DEFF 100%);
 }
 
 .whoAreWe {
@@ -81,6 +83,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    width: 80%;
     gap: 20px;
 }
 

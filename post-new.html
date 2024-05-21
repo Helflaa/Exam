@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:image" content="assets/favicon_io"/>
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png"/>
+    <script src="https://kit.fontawesome.com/5d32d5fe01.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/post-new-edit.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Post new blog</title>
+</head>
+<body>
+<header>
+    <div class="logoContainer">
+        <div class="logo"></div>
+    </div>
+    <ul class="nav">
+        <li>
+            <a href="#">Admin</a>
+        </li>
+        <li>
+            <a href="#"> Logout</a>
+        </li>
+    </ul>
+</header>
+
+<div class="container">
+    <h2 class="header">
+        new post
+    </h2>
+    <div class="input-form">
+        <label for="title">
+            Title
+        </label>
+        <input type="text" id="title" name="title" required>
+    </div>
+    <div class="input-form">
+        <label for="imageUrl">
+            Image URL
+        </label>
+        <input type="url" id="imageUrl" name="imageUrl" required>
+    </div>
+    <div class="input-form">
+        <label for="tag">
+            Tag
+        </label>
+        <input type="text" id="tag" name="tag">
+    </div>
+    <div class="input-form body-form">
+        <label for="body">
+            Body
+        </label>
+        <textarea id="body" name="body"></textarea>
+    </div>
+    <button class="button" id="saveBtn" type="submit">
+        Save
+    </button>
+</div>
+
+</body>
+</html>

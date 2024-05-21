@@ -118,6 +118,30 @@ footer {
     align-items: flex-end;
 }
 
+/*button*/
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 8px;
+    background: white;
+    color: black;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    box-shadow: 2px 2px 5px 0 #18ACFE;
+}
+
+.button:focus {
+    color: white;
+    background: #A3DEFF;
+}
 
 
 

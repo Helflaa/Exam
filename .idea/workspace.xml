@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c88b76d-0b55-4ed4-ad6f-3f2c2220d149" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/blog-post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/blog-post.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/login-register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
     </list>
@@ -19,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -47,13 +48,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "blog-post-page",
+    "git-widget-placeholder": "login-register",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -73,8 +74,10 @@
       <workItem from="1715692725847" duration="1343000" />
       <workItem from="1715715155523" duration="82000" />
       <workItem from="1715774649710" duration="1920000" />
-      <workItem from="1715778065490" duration="1427000" />
-      <workItem from="1715779836312" duration="3898000" />
+      <workItem from="1715778065490" duration="2030000" />
+      <workItem from="1716141023520" duration="26000" />
+      <workItem from="1716292715433" duration="757000" />
+      <workItem from="1716293815221" duration="4996000" />
     </task>
     <servers />
   </component>

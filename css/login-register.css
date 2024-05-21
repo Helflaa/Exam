@@ -1,0 +1,76 @@
+body {
+    background: linear-gradient(270deg, rgba(255, 155, 245, 0.00) 0%, #A3DEFF 100%), linear-gradient(180deg, #FF9BF5 0%, #A3DEFF 100%);
+}
+
+.logo{
+    margin: 40px;
+}
+
+.login-register{
+    border-radius: 8px;
+    border: 2px solid #000;
+    background: linear-gradient(90deg, rgba(255, 155, 245, 0.00) 0%, #A3DEFF 100%), linear-gradient(0deg, #FF9BF5 0%, #A3DEFF 100%);
+    box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.50);
+    padding: 40px 80px;
+    width: 470px;
+    max-width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header{
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-form{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+label {
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.button {
+    margin: 20px auto 20px auto ;
+}
+
+
+.accountQuestion {
+    display: flex;
+    gap: 4px;
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+}
+
+.accountQuestion a{
+    text-decoration: none;
+}
+
+.accountQuestion a:hover{
+    text-decoration: underline;
+}
+
+input{
+    height: 20px;
+    width: 180px;
+    max-width: 90%;
+    border: 1px solid black;
+}
+
+.errorMsg{
+    margin-top: 40px;
+    color: red;
+    font-family: Inter, sans-serif;
+}

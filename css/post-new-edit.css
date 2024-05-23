@@ -9,8 +9,9 @@
     background: linear-gradient(90deg, rgba(255, 155, 245, 0.00) 0%, #A3DEFF 100%), linear-gradient(0deg, #FF9BF5 0%, #A3DEFF 100%);
     box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.50);
     padding: 40px 80px;
-    width: 470px;
-    margin: 40px auto;
+    width: 700px;
+    margin: auto;
+    max-width: 90%;
 
 }
 
@@ -30,6 +31,11 @@
     justify-content: space-between;
     padding-bottom: 20px;
 }
+
+input{
+    width: 70%;
+}
+
 label {
     font-family: Inter, sans-serif;
     font-weight: 700;

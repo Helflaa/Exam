@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta property="og:image" content="assets/favicon_io"/>
-  <link rel="icon" type="image/png" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png"/>
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png"/>
-  <script src="https://kit.fontawesome.com/5d32d5fe01.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/login-register.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-  <title>login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:image" content="assets/favicon_io"/>
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png"/>
+    <script src="https://kit.fontawesome.com/5d32d5fe01.js" crossorigin="anonymous"></script>
+    <script src="js/login.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login-register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>login</title>
 </head>
 <body>
 
 <div class="logo"></div>
 <div class="login-register">
-  <h2 class="header">
-    login
-  </h2>
-  <div class="input-form">
-    <label for="email">
-      Email
-    </label>
-    <input type="email" id="email" name="email" placeholder="youremail@stud.noroff.no" required>
-  </div>
+    <h2 class="header">
+        login
+    </h2>
+    <form id="form">
+        <div class="input-form">
+            <label for="email">
+                Email
+            </label>
+            <input type="email" id="email" name="email" placeholder="youremail@stud.noroff.no" required>
+        </div>
 
-  <div class="input-form">
-    <label for="password">
-      Password
-    </label>
-    <input type="password" id="password" name="password">
-  </div>
-  <button class="button" type="submit" id="loginBtn">
-    Login
-  </button>
-  <div class="accountQuestion">
-    <p>No Account?</p>
-    <a href="register.html">Register</a>
-  </div>
-  <div class="errorMsg"></div>
+        <div class="input-form">
+            <label for="password">
+                Password
+            </label>
+            <input type="password" id="password" name="password">
+        </div>
+        <button class="button" type="submit" id="loginBtn">
+            Login
+        </button>
+        <div class="accountQuestion">
+            <p>No Account?</p>
+            <a href="register.html">Register</a>
+        </div>
+        <div class="errorMsg"></div>
+    </form>
 </div>
 
 </body>

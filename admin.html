@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png"/>
     <script src="https://kit.fontawesome.com/5d32d5fe01.js" crossorigin="anonymous"></script>
+    <script src="js/admin.js" defer></script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/admin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,19 +72,19 @@
 
 
 
-    <div class="post">
-        <div class="title">Title</div>
-        <div class="dateAndTime">Data/Time</div>
-        <div class="paragraph">hiiii</div>
-        <div class="postImage"></div>
-        <div class="btnsContainer">
-            <button class="button" id="editBtn">
-                Edit
-            </button>
-            <button class="button" id="deleteBtn">
-                Delete
-            </button>
-        </div>
+    <div id="postsContainer"></div>
+    <div class="overlay"></div>
+    <div class="deleteDialog">
+        <h3>
+            Post will be permanently deleted, are you sure?
+        </h3>
+        <div class="btnsContainer"></div>
+        <button class="deleteConfirm button">
+            Yes
+        </button>
+        <button class="deleteAbort button">
+            No
+        </button>
     </div>
 </main>
 </body>

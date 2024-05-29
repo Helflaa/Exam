@@ -1,6 +1,6 @@
-*,*::before, *::after {
+*, *::before, *::after {
     box-sizing: border-box;
-    margin:0;
+    margin: 0;
 }
 
 body {
@@ -11,7 +11,7 @@ body {
 }
 
 main {
-    flex: 1px;
+    flex: 1;
 }
 
 header {
@@ -22,7 +22,6 @@ header {
     justify-content: center;
     align-items: flex-end;
     gap: 100px;
-    flex-shrink: 0;
     background: linear-gradient(270deg, rgba(255, 155, 245, 0.00) 0%, #A3DEFF 100%), linear-gradient(180deg, #FF9BF5 0%, #A3DEFF 100%);
 }
 
@@ -34,13 +33,13 @@ header {
     align-items: center;
 }
 
-.logo{
-    height: 100px;
+.logo {
+    background: url("../assets/logo.png") center center / contain no-repeat;
     width: 100px;
-    background: dimgray;
+    height: 50px;
 }
 
-.nav{
+.nav {
     display: flex;
     width: 80%;
     padding: 20px 40px;
@@ -49,31 +48,34 @@ header {
 }
 
 .nav li {
-    list-style-type: none;
+    list-style: none;
+}
+
+.filterBtn {
     display: flex;
     justify-content: space-between;
     font-family: Inter, sans-serif;
     font-weight: 600;
     font-size: 20px;
     cursor: pointer;
-}
-
-.nav li a {
     text-decoration: none;
     color: black;
+    border: none;
+    background: none;
 }
 
-.nav li a:hover{
+
+.nav li button:hover {
     color: white;
 }
 
 footer {
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    width: 100%;
-    border-top: 1px solid black;
+    border-top: 2px solid #000;
     background: linear-gradient(90deg, rgba(255, 155, 245, 0.00) 0%, #A3DEFF 100%), linear-gradient(0deg, #FF9BF5 0%, #A3DEFF 100%);
 }
 
@@ -87,7 +89,7 @@ footer {
     gap: 20px;
 }
 
-.whoAreWe h3{
+.whoAreWe h3 {
     font-family: Inter, sans-serif;
     font-weight: 600;
     font-size: 16px;
@@ -97,17 +99,18 @@ footer {
     font-family: Inter, sans-serif;
     font-weight: 300;
     font-size: 14px;
+    text-indent: 20px;
+    line-height: 20px;
 }
 
 .igLogo {
-    background: url("../assets/ig(1).png") center no-repeat;
+    background : url("../assets/instagram.png") center no-repeat;
     height: 50px;
     width: 50px;
-
 }
 
 .fbLogo {
-    background: url("../assets/Facebook.png") center no-repeat;
+    background : url("../assets/facebook.png") center no-repeat;
     height: 50px;
     width: 50px;
 }
@@ -118,7 +121,7 @@ footer {
     align-items: flex-end;
 }
 
-/*button*/
+/*buttons*/
 
 .button {
     display: flex;
@@ -126,9 +129,10 @@ footer {
     align-items: center;
     padding: 4px 8px;
     border-radius: 8px;
+    border: 1px solid black;
     background: white;
     color: black;
-    font-family: Inter, sans-serif;
+    font-family: inter, sans-serif;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
@@ -142,6 +146,3 @@ footer {
     color: white;
     background: #A3DEFF;
 }
-
-
-

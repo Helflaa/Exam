@@ -61,7 +61,7 @@ button {
     padding: 20px;
     align-items: center;
     justify-items: center;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 0.5fr;
     grid-template-rows: 2fr 1fr;
     grid-template-areas:
     'title body image buttons'
@@ -106,7 +106,7 @@ button {
     background: dimgray;
 }
 
-.btnsContainer {
+.btnsContainerElement {
     grid-area: buttons;
     display: flex;
     flex-direction: column;

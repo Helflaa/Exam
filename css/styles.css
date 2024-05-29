@@ -51,6 +51,7 @@ header {
     list-style: none;
 }
 
+.navBtnsHeader,
 .filterBtn {
     display: flex;
     justify-content: space-between;

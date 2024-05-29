@@ -78,7 +78,7 @@ export function createBtnsContainerElement(postElement, postId, tagsString) {
     const editPost = btnsContainerElement.querySelector('.editBtn');
     editPost.addEventListener('click', (e) => {
         e.preventDefault();
-        window.location.href = `edit-post.html?id=${postId}&tags=${tagsString}`;
+        window.location.href = `post-edit.html?id=${postId}&tags=${tagsString}`;
     });
 
     const deletePost = btnsContainerElement.querySelector('.deleteBtn');
@@ -202,4 +202,9 @@ export function setupCarousel() {
             delete activeSlide.dataset.active;
         });
     });
+}
+
+export function getQueryParamValue(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
 }

@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png"/>
     <script src="https://kit.fontawesome.com/5d32d5fe01.js" crossorigin="anonymous"></script>
-    <script src="js/admin.js" defer></script>
+    <script type="module" src="js/admin.js" defer></script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/admin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,16 +24,16 @@
     </div>
     <ul class="nav">
         <li>
-            <a href="#">Admin</a>
+            <button class="navBtnsHeader">Admin</button>
         </li>
         <li>
-            <a href="#"> Logout</a>
+            <button class="navBtnsHeader"> Logout</button>
         </li>
     </ul>
 </header>
 
 <main>
-    <h1 id="header">Header</h1>
+    <h1 id="header">All post</h1>
 
     <div class="navBtns">
         <button class="button" id="newPost">

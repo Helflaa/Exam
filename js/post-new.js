@@ -1,3 +1,7 @@
+import {checkIfLoggedIn} from "./functions.js";
+checkIfLoggedIn()
+
+
 document.addEventListener('DOMContentLoaded',  () => {
     const form = document.querySelector('form');
 

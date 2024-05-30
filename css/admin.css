@@ -1,30 +1,35 @@
-.nav{
+.nav {
     justify-content: flex-end;
     gap: 100px;
 }
 
-#header{
+#header {
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Inter, sans-serif;
-    font-size: 20px;
     font-weight: 600;
+    font-size: 20px;
     margin: 40px;
     text-transform: uppercase;
 }
 
-.navBtns{
+.navBtns {
     display: flex;
     justify-content: space-between;
     margin: 40px;
 }
 
-button{
+button {
     height: 27px;
 }
 
-#categoryDropdown{
+#category {
+    width: 105px;
+    margin-bottom: 4px;
+}
+
+#categoryDropdown {
     display: none;
     list-style-type: none;
     padding: 4px;
@@ -33,26 +38,20 @@ button{
     width: 105px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+    position: absolute;
 }
 
-#categoryDropdown li button{
+#categoryDropdown li button {
     padding: 0;
     width: 100%;
     border: none;
     background: none;
 }
 
-#categoryDropdown li button:hover{
+#categoryDropdown li button:hover {
     border-radius: 8px;
     background: #A3DEFF;
 }
-
-#category{
-    width: 105px;
-    margin-bottom: 4px;
-}
-
-
 
 .post {
     width: 100%;
@@ -60,17 +59,17 @@ button{
     background: #AEE2FF;
     border: 1px solid black;
     display: grid;
-    align-items:center;
+    padding: 20px;
+    align-items: center;
     justify-items: center;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: 1fr 1fr 1fr 0.5fr;
     grid-template-rows: 2fr 1fr;
     grid-template-areas:
     'title body image buttons'
     'date body image buttons';
-
 }
 
-.title{
+.title {
     grid-area: title;
     display: flex;
     justify-content: center;
@@ -80,36 +79,25 @@ button{
     font-size: 18px;
 }
 
-.body{
+.body {
     grid-area: body;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Inter, sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-}
-
-
-.paragraph {
-    grid-area: body;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Inter, sans-serif;
+    font-size: 14px;
     font-weight: 300;
     text-indent: 20px;
-
 }
 
-.dateAndTime{
+.dateAndTime {
     grid-area: date;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Inter, sans-serif;
-    font-weight: 800;
     font-size: 14px;
+    font-weight: 300;
 }
 
 .postImage {
@@ -119,13 +107,104 @@ button{
     background: dimgray;
 }
 
-.btnsContainer{
+.btnsContainerElement {
     grid-area: buttons;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
 }
-#deleteBtn{
+
+
+.deleteBtn {
     background: red;
+}
+
+.overlay {
+    display: none;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.25);
+    height: 100vh;
+    width: 100vw;
+}
+
+.deleteDialog,
+#logoutDialog {
+    display: none;
+    width: 300px;
+    height: 150px;
+    background: linear-gradient(90deg, rgba(255, 155, 245, 0.00) 0%, #A3DEFF 100%), linear-gradient(0deg, #FF9BF5 0%, #A3DEFF 100%);
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    position: fixed;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btnsContainer {
+    display: flex;
+    padding-top: 40px;
+    gap: 40px;
+}
+
+@media (max-width: 700px) {
+    .navBtnsHeader{
+        font-size: 14px;
+    }
+
+    .title{
+        font-size: 14px;
+    }
+
+
+    .dateAndTime{
+        font-size: 12px;
+    }
+
+    .body{
+        display: none;
+    }
+
+    .post{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+        gap: 20px;
+        grid-template-areas:
+
+        'title'
+        'image'
+        'date'
+        'buttons';
+    }
+
+    .btnsContainerElement{
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0;
+        align-items: center;
+    }
+
+    .nav {
+        padding: 20px;
+        justify-content: center;
+        width: 100%;
+    }
+
 }

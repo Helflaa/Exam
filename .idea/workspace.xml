@@ -5,9 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c88b76d-0b55-4ed4-ad6f-3f2c2220d149" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/js/post-new.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-post.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog-post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/browse.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/blog-post.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/blog-post.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/browse.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login-register.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login-register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/post-new-edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/post-new-edit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/blog-post.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/blog-post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/display.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/display.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/post-edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/post-edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/post-new.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/post-new.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/post-edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/post-new.html" beforeDir="false" afterPath="$PROJECT_DIR$/post-new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +100,10 @@
       <workItem from="1716473852411" duration="3993000" />
       <workItem from="1716483176666" duration="6188000" />
       <workItem from="1716823457036" duration="3736000" />
-      <workItem from="1716827660176" duration="6345000" />
+      <workItem from="1716827660176" duration="6942000" />
+      <workItem from="1716893330647" duration="11004000" />
+      <workItem from="1717011574361" duration="4796000" />
+      <workItem from="1717061424837" duration="15012000" />
     </task>
     <servers />
   </component>

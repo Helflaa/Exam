@@ -100,8 +100,9 @@ input {
 .overlay {
     display: none;
     z-index: 1;
-    position: absolute;
+    position: fixed;
     top: 0;
+    left: 0;
     background: rgba(0, 0, 0, 0.25);
     height: 100vh;
     width: 100vw;

@@ -1,4 +1,6 @@
-import { getQueryParamValue } from "./functions.js";
+import { getQueryParamValue, checkIfLoggedIn } from "./functions.js";
+
+checkIfLoggedIn();
 
 const postId = getQueryParamValue('id');
 const blog = "https://v2.api.noroff.dev/blog/posts/Helene12/";

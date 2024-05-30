@@ -52,7 +52,8 @@ header {
 }
 
 .navBtnsHeader,
-.filterBtn {
+.filterBtn,
+.nav li a{
     display: flex;
     justify-content: space-between;
     font-family: Inter, sans-serif;
@@ -66,7 +67,12 @@ header {
 }
 
 
-.nav li button:hover {
+.nav li button:hover,
+.nav li a:hover{
+    color: white;
+}
+
+.nav li button:focus{
     color: white;
 }
 
@@ -105,7 +111,7 @@ footer {
 }
 
 .igLogo {
-    background : url("../assets/instagram.png") center no-repeat;
+    background : url("../assets/ig(1).png") center no-repeat;
     height: 50px;
     width: 50px;
 }
@@ -146,4 +152,14 @@ footer {
 .button:focus {
     color: white;
     background: #A3DEFF;
+}
+
+@media (max-width: 700px) {
+    footer {
+        flex-direction: column;
+    }
+
+    .whoAreWe {
+        width: 100%;
+    }
 }

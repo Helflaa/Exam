@@ -119,29 +119,29 @@ export function deletePostById(postId) {
     const accessToken = localStorage.getItem('accessToken');
 
     fetch(`https://v2.api.noroff.dev/blog/posts/Helene12/${postId}`, {
-        method: 'DELETE',
+    method: 'DELETE',
         headers: {
-            'Authorization': `Bearer ${accessToken}`
-        }
-    })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to delete post.');
-            }
-            // Remove the post element from the DOM
-            const postElement = document.querySelector(`.post[data-id="${postId}"]`);
-            if (postElement) {
-                postElement.remove();
-            }
-            // Hide delete dialog and overlay
-            const deleteDialog = document.querySelector('.deleteDialog');
-            const overlay = document.querySelector('.overlay');
-            deleteDialog.style.display = 'none';
-            overlay.style.display = 'none';
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+        'Authorization': `Bearer ${accessToken}`
+    }
+})
+.then(response => {
+    if (!response.ok) {
+        throw new Error('Failed to delete post.');
+    }
+    // Remove the post element from the DOM
+    const postElement = document.querySelector(`.post[data-id="${postId}"]`);
+    if (postElement) {
+        postElement.remove();
+    }
+    // Hide delete dialog and overlay
+    const deleteDialog = document.querySelector('.deleteDialog');
+    const overlay = document.querySelector('.overlay');
+    deleteDialog.style.display = 'none';
+    overlay.style.display = 'none';
+})
+    .catch(error => {
+        console.error('Error:', error);
+    });
 }
 
 // Fetch the latest posts and update the carousel
@@ -208,3 +208,15 @@ export function getQueryParamValue(param) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
 }
+
+export function checkIfLoggedIn() {
+    // Retrieve the accessToken and userData from localStorage
+    const accessToken = localStorage.getItem('accessToken');
+    const userDataString = localStorage.getItem('userData');
+
+    if (!accessToken || !userDataString) {
+        // If either the accessToken or userData is missing, redirect to login
+        window.location.href = 'login.html';
+    }
+}
+

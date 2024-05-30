@@ -82,10 +82,13 @@ function fetchRelatedPosts(tags, currentPostId) {
 }
 
 function displayRelatedPost(post) {
+    const tagsString = post.tags.join(',');
+    const postId = post.id;
     const sidePost = document.createElement('div');
     sidePost.classList.add('sidePost');
 
-    const sideImage = document.createElement('div');
+    const sideImage = document.createElement('a');
+    sideImage.href = `blog-post.html?id=${postId}&tags=${tagsString}`;
     sideImage.classList.add('sideImage');
     if (post.media && post.media.url) {
         sideImage.style.backgroundImage = `url(${post.media.url})`;

@@ -16,9 +16,8 @@ filterButtons.forEach(button => {
         const tag = button.dataset.tag;
         const url = `https://v2.api.noroff.dev/blog/posts/Helene12?_tag=${tag}`;
 
-        console.log(`Fetching posts with tag: ${tag}`); // For debugging
-
         // Clear the posts container and fetch filtered posts
         fetchPosts(url);
     });
 });
+

@@ -38,12 +38,13 @@ Account Register Page
 - As the owner, I want a validated register form that allows me to create a new account by entering my name, email and password.
 
 Site map: 
-- index.html
-- blog-post.html
-- post-new.html
-- post-edit.html
-- login.html
-- register.html
+- index.html (Blog feed page)
+- blog-post.html (Blog post detail)
+- post-new.html (Post new blog)
+- post-edit.html (Edit post)
+- login.html (login page)
+- register.html (register page)
+- admin.html (admin view page)
 
 Site is deplyed for public view : 
 https://helenestech.netlify.app

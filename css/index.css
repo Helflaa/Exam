@@ -118,53 +118,38 @@
     color: white;
 }
 
+#postsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+}
 
 .post {
     width: 100%;
-    height: 300px;
     padding: 40px;
     background: #AEE2FF;
     border: 1px solid black;
     display: grid;
     align-items: center;
     justify-items: center;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: 3fr 1fr;
     grid-template-areas:
-    'title body image'
-    'date body image';
+    'image'
+    'title'
+    'date';
 }
 
 .title {
     grid-area: title;
     display: flex;
+    padding: 10px;
+    text-align: center;
     justify-content: center;
     align-items: center;
     font-family: Inter, sans-serif;
     font-weight: 600;
     font-size: 18px;
-}
-
-.body {
-    grid-area: body;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Inter, sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-}
-
-
-.paragraph {
-    grid-area: body;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Inter, sans-serif;
-    font-weight: 300;
-    text-indent: 20px;
-
 }
 
 .dateAndTime {
@@ -184,6 +169,11 @@
     background: dimgray;
 }
 
+@media (max-width: 850px) {
+    #postsContainer {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
 
 @media (max-width: 800px) {
     .filterBtn {
@@ -193,7 +183,7 @@
 
 @media (max-width: 700px) {
     .title {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .body,
@@ -214,16 +204,7 @@
         padding: 20px;
     }
 
-    .body {
-        display: none;
-    }
-
-    .post {
-        gap: 10px;
-    }
-
-    .postImage {
-        height: 150px;
-        width: 150px;
+    #postsContainer {
+        grid-template-columns: 1fr;
     }
 }

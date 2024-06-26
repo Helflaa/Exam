@@ -32,13 +32,6 @@ export function fetchPosts(url, callback) {
                 dateAndTimeElement.innerHTML = new Date(post.created).toLocaleString();
                 postElement.appendChild(dateAndTimeElement);
 
-                const bodyElement = document.createElement('div');
-                bodyElement.classList.add('body');
-                const words = post.body.split(' ');
-                const truncatedText = words.slice(0, 20).join(' ');
-                bodyElement.innerHTML = truncatedText + '...<br><br>';
-                postElement.appendChild(bodyElement);
-
                 const postImageElement = document.createElement('a');
                 postImageElement.href = `blog-post.html?id=${postId}&tags=${tagsString}`;
                 postImageElement.target = '_blank';
@@ -60,7 +53,7 @@ export function fetchPosts(url, callback) {
             });
         })
         .catch(error => {
-            console.error('Error:', error);
+            console.error('Post could not be fetched');
         });
 }
 
@@ -119,29 +112,29 @@ export function deletePostById(postId) {
     const accessToken = localStorage.getItem('accessToken');
 
     fetch(`https://v2.api.noroff.dev/blog/posts/Helene12/${postId}`, {
-    method: 'DELETE',
+        method: 'DELETE',
         headers: {
-        'Authorization': `Bearer ${accessToken}`
-    }
-})
-.then(response => {
-    if (!response.ok) {
-        throw new Error('Failed to delete post.');
-    }
-    // Remove the post element from the DOM
-    const postElement = document.querySelector(`.post[data-id="${postId}"]`);
-    if (postElement) {
-        postElement.remove();
-    }
-    // Hide delete dialog and overlay
-    const deleteDialog = document.querySelector('.deleteDialog');
-    const overlay = document.querySelector('.overlay');
-    deleteDialog.style.display = 'none';
-    overlay.style.display = 'none';
-})
-    .catch(error => {
-        console.error('Error:', error);
-    });
+            'Authorization': `Bearer ${accessToken}`
+        }
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to delete post.');
+            }
+            // Remove the post element from the DOM
+            const postElement = document.querySelector(`.post[data-id="${postId}"]`);
+            if (postElement) {
+                postElement.remove();
+            }
+            // Hide delete dialog and overlay
+            const deleteDialog = document.querySelector('.deleteDialog');
+            const overlay = document.querySelector('.overlay');
+            deleteDialog.style.display = 'none';
+            overlay.style.display = 'none';
+        })
+        .catch(error => {
+            console.error('Failed to delete post');
+        });
 }
 
 // Fetch the latest posts and update the carousel
@@ -161,9 +154,11 @@ export function updateCarouselWithLatestPosts(url) {
                 if (carouselSlides[index]) {
                     const slide = carouselSlides[index];
                     const tagsString = post.tags.join(',');
-                    const thumbnail = document.querySelector('.slide');
-                    thumbnail.href = `blog-post.html?id=${post.id}&tags=${tagsString}`;
-                    slide.querySelector('div').style.backgroundImage = `url(${post.media.url})`;
+                    slide.href = `blog-post.html?id=${post.id}&tags=${tagsString}`; // Update the href attribute for each slide
+
+                    const slideDiv = slide.querySelector('div');
+                    slideDiv.style.backgroundImage = `url(${post.media.url})`;
+
                     const slideOverlay = slide.querySelector('.slideOverlay');
                     const slideTitle = slideOverlay.querySelector('.slideTitle');
                     slideTitle.textContent = post.title;
@@ -174,7 +169,7 @@ export function updateCarouselWithLatestPosts(url) {
             setupCarousel();
         })
         .catch(error => {
-            console.error('Error:', error);
+            console.error('failed to fetch post');
         });
 }
 
@@ -219,4 +214,3 @@ export function checkIfLoggedIn() {
         window.location.href = 'login.html';
     }
 }
-

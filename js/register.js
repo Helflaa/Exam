@@ -1,58 +1,78 @@
-document.addEventListener('DOMContentLoaded', function (){
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('DOM fully loaded and parsed');
     const form = document.getElementById('form');
     const messageDiv = document.querySelector('.errorMsg');
     const overlay = document.querySelector('.overlay');
-    const successMsg = document. querySelector('.successful');
-    const goToLogin = document.getElementById('goToLogin');
+    const successfulMessage = document.querySelector('.successful');
+    const goToLoginButton = document.getElementById('goToLogin');
 
-    form.addEventListener('submit', function (event){
-        event.preventDefault();
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent form submission
+        console.log('Form submit event triggered');
 
+        // Retrieve form data
         const email = document.getElementById('email').value;
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
         const repeatPassword = document.getElementById('repeatPassword').value;
 
-    //     check if passwords match
+        // Check if passwords match
         if (password !== repeatPassword) {
-            messageDiv.textContent = 'Password do not match';
-
+            messageDiv.textContent = 'Passwords do not match';
+            console.log('Passwords do not match');
+            return;
         }
 
-        const  payload = {
+        // Check if email is in the correct format
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@stud\.noroff\.no$/;
+        if (!emailPattern.test(email)) {
+            messageDiv.textContent = 'Email must be @stud.noroff.no';
+            console.log('Email format is incorrect');
+            return;
+        }
+
+        // Construct JSON payload
+        const payload = {
             name: username,
             email: email,
             password: password,
-        }
+        };
+
         fetch('https://v2.api.noroff.dev/auth/register', {
             method: 'POST',
             headers: {
-                'content-type': 'application/json',
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(payload)
         })
-            .then(response =>{
-                if (!response.ok){
-                    throw new Error('failed to register');
+            .then(response => response.json().then(data => {
+                if (!response.ok) {
+                    // Log the response status and error message
+                    console.error('Failed to register:', response.status, data);
+
+                    // Extract and display the error message
+                    const errorMessage = data.errors && data.errors.length > 0
+                        ? data.errors[0].message
+                        : 'Failed to register';
+                    messageDiv.textContent = errorMessage; // Update the messageDiv with the error message
+
+                    throw new Error(errorMessage);
                 }
-                return response.json();
-    })
+                return data;
+            }))
             .then(data => {
-                console.log('register Successful!', data);
-
+                // Handle successful registration
                 overlay.style.display = 'block';
-                successMsg.style.display = 'flex';
+                successfulMessage.style.display = 'flex';
             })
-            .catch(error =>{
-                console.error('registration error', error.message);
-                messageDiv.textContent = 'Registration failed';
-            })
+            .catch(error => {
+                // Handle any errors that weren't caught by the fetch chain
+                messageDiv.textContent = error.message;
+            });
 
+        // Handle click on "Go to Login" button
+        goToLoginButton.addEventListener('click', function () {
+            window.location.href = 'login.html';
+        });
+    });
 });
-    goToLogin.addEventListener('click', function (){
-        window.location.href = 'login.html'
-    })
-
-})
-
-
